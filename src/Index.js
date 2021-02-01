@@ -24,6 +24,10 @@ const useStyles = makeStyles((theme) => ({
     textShadow: `0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
     0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
     0 20px 20px rgba(0, 0, 0, 0.15)`
+  },
+  imgIcon: {
+    width: '35px',
+    marginRight: '15px'
   }
 }))
 
@@ -44,6 +48,7 @@ const Index = () => {
         </Grid>
         <Grid item sm={6} style={{ paddingLeft: '50px' }}>
           <Typography variant='h4'>
+            <img src='/Images/GitHub-Mark-32px.png' className={classes.imgIcon} />
             <a className={classes.shadowText} href='https://github.com/scoobis' target='_blank'>
               GITHUB
             </a>
