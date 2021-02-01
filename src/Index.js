@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
   shadowText: {
     color: '#fff',
     fontWeight: 'bold',
+    letterSpacing: '3px',
     fontFamily: 'Helvetica',
     fontSize: '45px',
     textDecoration: 'none',
@@ -30,21 +31,31 @@ const Index = () => {
   const classes = useStyles()
   return (
     <Container>
-      <Grid container justify='center' direction='row' spacing={0} alignItems='center' className={classes.container} m={4}>
+      <Grid container justify='center' direction='row' spacing={0} alignItems='center' className={classes.container}>
         <Grid item sm={6}>
           <Typography variant='h3'>Hi!</Typography>
           <Typography variant='h1' className={classes.bold}>
             I'm Gabriel.
           </Typography>
           <h3 style={{ fontSize: '30px' }}>
-            I'am a <Typical steps={['devops engineer', 2000, 'full-stack developer', 2000, 'Triathlete', 2000]} loop={Infinity} wrapper='b' />
+            I'am a <Typical steps={['devops engineer', 1500, 'full-stack developer', 1500, 'Triathlete', 1500]} loop={Infinity} wrapper='b' />
           </h3>
           <p className={classes.borderBottom}>hehjehe</p>
         </Grid>
-        <Grid item sm={6}>
+        <Grid item sm={6} style={{ paddingLeft: '50px' }}>
           <Typography variant='h4'>
             <a className={classes.shadowText} href='https://github.com/scoobis' target='_blank'>
-              Github
+              GITHUB
+            </a>
+          </Typography>
+          <Typography variant='h4'>
+            <a className={classes.shadowText} href='https://www.linkedin.com/in/gabriel-bj%C3%B6rlin-1625281b6/' target='_blank'>
+              LINKEDIN
+            </a>
+          </Typography>
+          <Typography variant='h4'>
+            <a className={classes.shadowText} href='mailto:gabriel.bjorlin@gmail.com'>
+              EMAIL
             </a>
           </Typography>
         </Grid>
