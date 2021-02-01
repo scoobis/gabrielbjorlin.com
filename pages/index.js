@@ -1,3 +1,7 @@
-export default function Home() {
-  return <h1>Hej</h1>
+import Index from '../src/Index'
+
+const Home = () => {
+  return <Index />
 }
+
+export default Home
