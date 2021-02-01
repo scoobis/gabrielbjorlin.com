@@ -8,7 +8,8 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '100vh'
   },
   bold: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    marginBottom: '-20px'
   },
   borderBottom: {
     borderBottom: '3px solid black'
@@ -35,17 +36,17 @@ const Index = () => {
           <Typography variant='h1' className={classes.bold}>
             I'm Gabriel.
           </Typography>
-          <h2>
-            I'am a <Typical steps={['developer', 1000, 'full-stack', 1000, 'test', 1000]} loop={Infinity} wrapper='b' />
-          </h2>
+          <h3 style={{ fontSize: '30px' }}>
+            I'am a <Typical steps={['devops engineer', 2000, 'full-stack developer', 2000, 'Triathlete', 2000]} loop={Infinity} wrapper='b' />
+          </h3>
           <p className={classes.borderBottom}>hehjehe</p>
         </Grid>
         <Grid item sm={6}>
-          <h3>
+          <Typography variant='h4'>
             <a className={classes.shadowText} href='https://github.com/scoobis' target='_blank'>
               Github
             </a>
-          </h3>
+          </Typography>
         </Grid>
       </Grid>
     </Container>

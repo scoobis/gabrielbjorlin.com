@@ -13,7 +13,7 @@ const theme = createMuiTheme({
       main: red.A400
     },
     background: {
-      default: '#fff'
+      default: '#f8f8f8'
     }
   },
   typography: {
@@ -30,7 +30,7 @@ const theme = createMuiTheme({
       '"Segoe UI Symbol"'
     ].join(','),
     h1: {
-      fontSize: '2.4rem'
+      fontSize: '3.4rem'
     },
     h2: {
       fontSize: '2rem'
