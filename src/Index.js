@@ -5,14 +5,15 @@ import Typical from 'react-typical'
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    minHeight: '100vh'
+    minHeight: '100vh',
+    marginLeft: '25px'
   },
   bold: {
     fontWeight: 'bold',
     marginBottom: '-20px'
   },
   borderBottom: {
-    borderBottom: '3px solid black'
+    borderBottom: '5px solid black'
   },
   shadowText: {
     color: '#fff',
@@ -31,6 +32,12 @@ const useStyles = makeStyles((theme) => ({
   },
   linkMargin: {
     marginTop: '5px'
+  },
+  gridBox: {
+    maxWidth: '500px'
+  },
+  linkGridBox: {
+    paddingLeft: '50px'
   }
 }))
 
@@ -38,8 +45,8 @@ const Index = () => {
   const classes = useStyles()
   return (
     <Container>
-      <Grid container justify='center' direction='row' spacing={0} alignItems='center' className={classes.container}>
-        <Grid item sm={6}>
+      <Grid container justify='center' spacing={0} alignItems='center' className={classes.container}>
+        <Grid item sm={12} md={6} className={classes.gridBox}>
           <Typography variant='h3'>Hi!</Typography>
           <Typography variant='h1' className={classes.bold}>
             I'm Gabriel.
@@ -50,7 +57,7 @@ const Index = () => {
           </h3>
           <p className={classes.borderBottom}>hehjehe</p>
         </Grid>
-        <Grid item sm={6} style={{ paddingLeft: '50px' }}>
+        <Grid item sm={12} md={6} className={classes.linkGridBox}>
           <Typography variant='h4' className={classes.linkMargin}>
             <a className={classes.shadowText} href='https://github.com/scoobis' target='_blank'>
               <i className={`fa fa-github ${classes.imgIcon}`}></i>
@@ -64,7 +71,7 @@ const Index = () => {
             </a>
           </Typography>
           <Typography variant='h4' className={classes.linkMargin}>
-            <a className={classes.shadowText} href='https://www.instagram.com/gabrielbjorlin/'>
+            <a className={classes.shadowText} href='https://www.instagram.com/gabrielbjorlin/' target='_blank'>
               <i className={`fa fa-instagram ${classes.imgIcon}`}></i>
               INSTAGRAM
             </a>
