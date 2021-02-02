@@ -5,8 +5,8 @@ import Typical from 'react-typical'
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    minHeight: '100vh',
-    marginLeft: '25px'
+    minHeight: '80vh',
+    paddingLeft: '25px'
   },
   bold: {
     fontWeight: 'bold',
@@ -28,34 +28,39 @@ const useStyles = makeStyles((theme) => ({
   },
   imgIcon: {
     boxShadow: '0 0 200px 1px grey',
-    marginRight: '20px'
+    marginRight: '15px'
   },
   linkMargin: {
     marginTop: '5px'
   },
   gridBox: {
+    width: '500px',
     maxWidth: '500px'
   },
-  linkGridBox: {
-    paddingLeft: '50px'
-  }
+  linkGridBox: {}
 }))
 
 const Index = () => {
   const classes = useStyles()
   return (
     <Container>
-      <Grid container justify='center' spacing={0} alignItems='center' className={classes.container}>
+      <h2 style={{ marginTop: '100px', textAlign: 'center', color: 'grey' }}>
+        <i className='fa fa-wrench' style={{ color: 'grey', marginRight: '10px' }}></i>
+        Under konstruktion
+      </h2>
+      <Grid container justify='center' spacing={8} alignItems='center' className={classes.container}>
         <Grid item sm={12} md={6} className={classes.gridBox}>
           <Typography variant='h3'>Hi!</Typography>
           <Typography variant='h1' className={classes.bold}>
             I'm Gabriel.
           </Typography>
-          <h3 style={{ fontSize: '30px' }}>
+          <h3 style={{ fontSize: '30px', color: 'grey' }}>
             <i className='fa fa-code' style={{ marginRight: '10px', fontWeight: 'bold' }}></i>
-            I'am a <Typical steps={['devops engineer', 1500, 'full-stack developer', 1500, 'Triathlete', 1500]} loop={Infinity} wrapper='b' />
+            <Typical steps={['Devops Engineer', 1500, 'Full-Stack Developer', 1500, 'Triathlete', 1500]} loop={Infinity} wrapper='b' />
           </h3>
-          <p className={classes.borderBottom}>hehjehe</p>
+          <p className={classes.borderBottom}>
+            Full-stack developer, that likes to work with the entire tech stack, including infrastructure and administration!
+          </p>
         </Grid>
         <Grid item sm={12} md={6} className={classes.linkGridBox}>
           <Typography variant='h4' className={classes.linkMargin}>
@@ -87,5 +92,4 @@ const Index = () => {
     </Container>
   )
 }
-
 export default Index

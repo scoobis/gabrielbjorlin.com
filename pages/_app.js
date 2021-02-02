@@ -4,7 +4,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/styles/theme'
 //import Header from '../src/components/layouts/Header/Header'
-//import Footer from '../src/components/layouts/Footer'
+import Footer from '../src/components/layouts/Footer'
 
 export default function MyApp(props) {
   const { Component, pageProps } = props
@@ -28,6 +28,7 @@ export default function MyApp(props) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </>
   )
