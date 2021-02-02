@@ -26,8 +26,11 @@ const useStyles = makeStyles((theme) => ({
     0 20px 20px rgba(0, 0, 0, 0.15)`
   },
   imgIcon: {
-    width: '35px',
-    marginRight: '15px'
+    boxShadow: '0 0 200px 1px grey',
+    marginRight: '20px'
+  },
+  linkMargin: {
+    marginTop: '5px'
   }
 }))
 
@@ -42,24 +45,33 @@ const Index = () => {
             I'm Gabriel.
           </Typography>
           <h3 style={{ fontSize: '30px' }}>
+            <i className='fa fa-code' style={{ marginRight: '10px', fontWeight: 'bold' }}></i>
             I'am a <Typical steps={['devops engineer', 1500, 'full-stack developer', 1500, 'Triathlete', 1500]} loop={Infinity} wrapper='b' />
           </h3>
           <p className={classes.borderBottom}>hehjehe</p>
         </Grid>
         <Grid item sm={6} style={{ paddingLeft: '50px' }}>
-          <Typography variant='h4'>
-            <img src='/Images/GitHub-Mark-32px.png' className={classes.imgIcon} />
+          <Typography variant='h4' className={classes.linkMargin}>
             <a className={classes.shadowText} href='https://github.com/scoobis' target='_blank'>
+              <i className={`fa fa-github ${classes.imgIcon}`}></i>
               GITHUB
             </a>
           </Typography>
-          <Typography variant='h4'>
+          <Typography variant='h4' className={classes.linkMargin}>
             <a className={classes.shadowText} href='https://www.linkedin.com/in/gabriel-bj%C3%B6rlin-1625281b6/' target='_blank'>
+              <i className={`fa fa-linkedin ${classes.imgIcon}`}></i>
               LINKEDIN
             </a>
           </Typography>
-          <Typography variant='h4'>
+          <Typography variant='h4' className={classes.linkMargin}>
+            <a className={classes.shadowText} href='https://www.instagram.com/gabrielbjorlin/'>
+              <i className={`fa fa-instagram ${classes.imgIcon}`}></i>
+              INSTAGRAM
+            </a>
+          </Typography>
+          <Typography variant='h4' className={classes.linkMargin}>
             <a className={classes.shadowText} href='mailto:gabriel.bjorlin@gmail.com'>
+              <i className={`fa fa-envelope-square ${classes.imgIcon}`}></i>
               EMAIL
             </a>
           </Typography>
