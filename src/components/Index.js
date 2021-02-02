@@ -5,7 +5,7 @@ import Typical from 'react-typical'
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    minHeight: '100vh',
+    minHeight: '80vh',
     paddingLeft: '25px'
   },
   bold: {
@@ -44,13 +44,17 @@ const Index = () => {
   const classes = useStyles()
   return (
     <Container>
+      <h2 style={{ marginTop: '100px', textAlign: 'center', color: 'grey' }}>
+        <i className='fa fa-wrench' style={{ color: 'grey', marginRight: '10px' }}></i>
+        Under konstruktion
+      </h2>
       <Grid container justify='center' spacing={8} alignItems='center' className={classes.container}>
         <Grid item sm={12} md={6} className={classes.gridBox}>
           <Typography variant='h3'>Hi!</Typography>
           <Typography variant='h1' className={classes.bold}>
             I'm Gabriel.
           </Typography>
-          <h3 style={{ fontSize: '30px' }}>
+          <h3 style={{ fontSize: '30px', color: 'grey' }}>
             <i className='fa fa-code' style={{ marginRight: '10px', fontWeight: 'bold' }}></i>
             <Typical steps={['Devops Engineer', 1500, 'Full-Stack Developer', 1500, 'Triathlete', 1500]} loop={Infinity} wrapper='b' />
           </h3>
@@ -88,5 +92,4 @@ const Index = () => {
     </Container>
   )
 }
-
 export default Index
