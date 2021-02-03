@@ -6,7 +6,9 @@ import Link from 'next/link'
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    boxShadow: '15px 15px 15px 15px black',
+    borderTop: '2px solid grey',
+    marginRight: '20px',
+    marginLeft: '20px',
     padding: '60px 30px',
     overflowX: 'hidden',
     color: '#aaa'

@@ -52,6 +52,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       fontSize: '25px'
     }
+  },
+  temp: {
+    marginTop: '-30px',
+    textAlign: 'center',
+    color: 'grey',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '30px'
+    }
   }
 }))
 
@@ -59,10 +67,6 @@ const Index = () => {
   const classes = useStyles()
   return (
     <Container>
-      <h2 style={{ marginTop: '100px', textAlign: 'center', color: 'grey' }}>
-        <i className='fa fa-wrench' style={{ color: 'grey', marginRight: '10px' }}></i>
-        Under konstruktion
-      </h2>
       <Grid container justify='center' spacing={8} alignItems='center' className={classes.container}>
         <Grid item sm={12} md={6} className={classes.gridBox}>
           <Typography variant='h3'>Hi!</Typography>
@@ -104,6 +108,10 @@ const Index = () => {
           </Typography>
         </Grid>
       </Grid>
+      <h2 className={classes.temp}>
+        <i className='fa fa-wrench' style={{ color: 'grey', marginRight: '10px' }}></i>
+        Under konstruktion
+      </h2>
     </Container>
   )
 }
