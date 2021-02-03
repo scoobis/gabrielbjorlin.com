@@ -5,7 +5,7 @@ import Typical from 'react-typical'
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    minHeight: '80vh',
+    minHeight: '85vh',
     paddingLeft: '25px'
   },
   bold: {
@@ -54,7 +54,8 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   temp: {
-    marginTop: '-30px',
+    marginTop: '-50px',
+    marginBottom: '40px',
     textAlign: 'center',
     color: 'grey',
     [theme.breakpoints.down('sm')]: {
