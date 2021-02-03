@@ -5,7 +5,7 @@ import Typical from 'react-typical'
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    minHeight: '80vh',
+    minHeight: '85vh',
     paddingLeft: '25px'
   },
   bold: {
@@ -24,7 +24,11 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     textShadow: `0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
     0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
-    0 20px 20px rgba(0, 0, 0, 0.15)`
+    0 20px 20px rgba(0, 0, 0, 0.15)`,
+
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '35px'
+    }
   },
   imgIcon: {
     boxShadow: '0 0 200px 1px grey',
@@ -37,24 +41,40 @@ const useStyles = makeStyles((theme) => ({
     width: '500px',
     maxWidth: '500px'
   },
-  linkGridBox: {}
+  linkGridBox: {
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: '40px'
+    }
+  },
+  typingText: {
+    fontSize: '30px',
+    color: 'grey',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '25px'
+    }
+  },
+  temp: {
+    marginTop: '-50px',
+    marginBottom: '40px',
+    textAlign: 'center',
+    color: 'grey',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '30px'
+    }
+  }
 }))
 
 const Index = () => {
   const classes = useStyles()
   return (
     <Container>
-      <h2 style={{ marginTop: '100px', textAlign: 'center', color: 'grey' }}>
-        <i className='fa fa-wrench' style={{ color: 'grey', marginRight: '10px' }}></i>
-        Under konstruktion
-      </h2>
       <Grid container justify='center' spacing={8} alignItems='center' className={classes.container}>
         <Grid item sm={12} md={6} className={classes.gridBox}>
           <Typography variant='h3'>Hi!</Typography>
           <Typography variant='h1' className={classes.bold}>
             I'm Gabriel.
           </Typography>
-          <h3 style={{ fontSize: '30px', color: 'grey' }}>
+          <h3 className={classes.typingText}>
             <i className='fa fa-code' style={{ marginRight: '10px', fontWeight: 'bold' }}></i>
             <Typical steps={['Devops Engineer', 1500, 'Full-Stack Developer', 1500, 'Triathlete', 1500]} loop={Infinity} wrapper='b' />
           </h3>
@@ -89,6 +109,10 @@ const Index = () => {
           </Typography>
         </Grid>
       </Grid>
+      <h2 className={classes.temp}>
+        <i className='fa fa-wrench' style={{ color: 'grey', marginRight: '10px' }}></i>
+        Under konstruktion
+      </h2>
     </Container>
   )
 }

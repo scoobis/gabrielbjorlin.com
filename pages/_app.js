@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/styles/theme'
-//import Header from '../src/components/layouts/Header/Header'
+import Header from '../src/components/layouts/Header'
 import Footer from '../src/components/layouts/Footer'
 
 export default function MyApp(props) {
@@ -27,6 +27,7 @@ export default function MyApp(props) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <Header />
         <Component {...pageProps} />
         <Footer />
       </ThemeProvider>

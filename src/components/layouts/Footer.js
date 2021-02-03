@@ -6,7 +6,9 @@ import Link from 'next/link'
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    boxShadow: '15px 15px 15px 15px black',
+    borderTop: '2px solid grey',
+    marginRight: '20px',
+    marginLeft: '20px',
     padding: '60px 30px',
     overflowX: 'hidden',
     color: '#aaa'
@@ -65,17 +67,15 @@ const Footer = () => {
         <Grid item xl={2} lg={4} sm={6} xs={12}>
           <Typography variant='subtitle1' className={classes.footerText}>
             <a href='mailTo:gabriel.bjorlin@gmail.com' target='_blank' className={classes.linktext}>
-              <i className={`fa fa-copyright ${classes.icon}`} aria-hidden='true'></i>
-              Gabriel Björlin, {currentYear}
+              <i className={`fa fa-envelope-square ${classes.icon}`} aria-hidden='true'></i>
+              Gabriel.Bjorlin@gmail.com
             </a>
           </Typography>
         </Grid>
         <Grid item xl={2} lg={4} sm={6} xs={12}>
           <Typography variant='subtitle1' className={classes.footerText}>
-            <a href='mailTo:gabriel.bjorlin@gmail.com' target='_blank' className={classes.linktext}>
-              <i className={`fa fa-envelope-square ${classes.icon}`} aria-hidden='true'></i>
-              Gabriel.Bjorlin@gmail.com
-            </a>
+            <i className={`fa fa-copyright ${classes.icon}`} aria-hidden='true'></i>
+            Gabriel Björlin, {currentYear}
           </Typography>
         </Grid>
       </Grid>
