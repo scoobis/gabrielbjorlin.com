@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Typical from 'react-typical'
@@ -68,6 +68,9 @@ const useStyles = makeStyles((theme) => ({
 
 const Index = () => {
   const classes = useStyles()
+
+  const [description] = useState('Full-stack developer, that likes to work with the entire tech stack, including infrastructure and administration!')
+
   return (
     <Container>
       <Grid container justify='center' spacing={8} alignItems='center' className={classes.container}>
@@ -80,9 +83,7 @@ const Index = () => {
             <i className='fa fa-code' style={{ marginRight: '10px', fontWeight: 'bold' }}></i>
             <Typical steps={['Devops Engineer', 1500, 'Full-Stack Developer', 1500, 'Triathlete', 1500]} loop={Infinity} wrapper='b' />
           </h3>
-          <p className={classes.borderBottom}>
-            Full-stack developer, that likes to work with the entire tech stack, including infrastructure and administration!
-          </p>
+          <p className={classes.borderBottom}>{description}</p>
         </Grid>
         <Grid item sm={12} md={6} className={classes.linkGridBox}>
           <Typography variant='h4' className={classes.linkMargin}>
