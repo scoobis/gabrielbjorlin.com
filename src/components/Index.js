@@ -53,8 +53,8 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '25px'
     }
   },
-  temp: {
-    marginTop: '-50px',
+  bottomContainer: {
+    marginTop: '-80px',
     marginBottom: '40px',
     textAlign: 'center',
     color: 'grey',
@@ -109,10 +109,17 @@ const Index = () => {
           </Typography>
         </Grid>
       </Grid>
-      <h2 className={classes.temp}>
-        <i className='fa fa-wrench' style={{ color: 'grey', marginRight: '10px' }}></i>
-        Under konstruktion
-      </h2>
+      <div className={classes.bottomContainer}>
+        <Typography variant='subtitle1' style={{ textAlign: 'center' }}>
+          <a href='https://github.com/scoobis/gabrielbjorlin.com' target='_blank' style={{ color: 'grey', textDecoration: 'none' }}>
+            View Source Code
+          </a>
+        </Typography>
+        <h2>
+          <i className='fa fa-wrench' style={{ color: 'grey', marginRight: '10px' }}></i>
+          Under konstruktion
+        </h2>
+      </div>
     </Container>
   )
 }
