@@ -1,7 +1,9 @@
 import React from 'react'
-import { Container, Grid, Typography, Cell } from '@material-ui/core'
+import { Container, Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Typical from 'react-typical'
+
+import { GITHUB_URL, LINKEDIN_URL, INSTAGRAM_URL, EMAIL } from '../utils/config'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -71,7 +73,7 @@ const Index = () => {
       <Grid container justify='center' spacing={8} alignItems='center' className={classes.container}>
         <Grid item sm={12} md={6} className={classes.gridBox}>
           <Typography variant='h3'>Hi!</Typography>
-          <Typography variant='h1' className={classes.bold}>
+          <Typography variant='h1' className={classes.bold} style={{ fontSize: '3.4rem' }}>
             I'm Gabriel.
           </Typography>
           <h3 className={classes.typingText}>
@@ -84,25 +86,25 @@ const Index = () => {
         </Grid>
         <Grid item sm={12} md={6} className={classes.linkGridBox}>
           <Typography variant='h4' className={classes.linkMargin}>
-            <a className={classes.shadowText} href='https://github.com/scoobis' target='_blank'>
+            <a className={classes.shadowText} href={GITHUB_URL} target='_blank'>
               <i className={`fa fa-github ${classes.imgIcon}`}></i>
               GITHUB
             </a>
           </Typography>
           <Typography variant='h4' className={classes.linkMargin}>
-            <a className={classes.shadowText} href='https://www.linkedin.com/in/gabriel-bj%C3%B6rlin-1625281b6/' target='_blank'>
+            <a className={classes.shadowText} href={LINKEDIN_URL} target='_blank'>
               <i className={`fa fa-linkedin ${classes.imgIcon}`}></i>
               LINKEDIN
             </a>
           </Typography>
           <Typography variant='h4' className={classes.linkMargin}>
-            <a className={classes.shadowText} href='https://www.instagram.com/gabrielbjorlin/' target='_blank'>
+            <a className={classes.shadowText} href={INSTAGRAM_URL} target='_blank'>
               <i className={`fa fa-instagram ${classes.imgIcon}`}></i>
               INSTAGRAM
             </a>
           </Typography>
           <Typography variant='h4' className={classes.linkMargin}>
-            <a className={classes.shadowText} href='mailto:gabriel.bjorlin@gmail.com'>
+            <a className={classes.shadowText} href={`mailto:${EMAIL}`}>
               <i className={`fa fa-envelope-square ${classes.imgIcon}`}></i>
               EMAIL
             </a>
