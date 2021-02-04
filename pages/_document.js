@@ -7,10 +7,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang='en'>
-        <Head>
-          <meta name='theme-color' content={theme.palette.primary.main} />
-          <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' />
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import BottomNavigation from '@material-ui/core/BottomNavigation'
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
@@ -20,9 +20,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LabelBottomNavigation() {
   const classes = useStyles()
-  const [value, setValue] = useState('home')
-
   const router = useRouter()
+
+  // if pathname is index(/) value needs to be set to 'home'
+  const [value, setValue] = useState(router.pathname === '/' ? 'home' : router.pathname.substring(1))
 
   const handleChange = (event, newValue) => {
     if (newValue === 'home') router.push('/')
