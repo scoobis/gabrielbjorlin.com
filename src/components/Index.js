@@ -118,10 +118,6 @@ const Index = () => {
             View Source Code
           </a>
         </Typography>
-        <h2>
-          <i className='fa fa-wrench' style={{ color: 'grey', marginRight: '10px' }}></i>
-          Under konstruktion
-        </h2>
       </div>
     </Container>
   )

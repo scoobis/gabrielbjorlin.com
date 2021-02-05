@@ -163,7 +163,7 @@ const Skills = () => {
               focusable='false'
               data-prefix='fab'
               data-icon='html5'
-              class={`svg-inline--fa fa-html5 fa-w-12 ${classes.svgImg}`}
+              className={`svg-inline--fa fa-html5 fa-w-12 ${classes.svgImg}`}
               role='img'
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 384 512'
@@ -190,7 +190,7 @@ const Skills = () => {
               focusable='false'
               data-prefix='fab'
               data-icon='css3-alt'
-              class={`svg-inline--fa fa-css3-alt fa-w-12 ${classes.svgImg}`}
+              className={`svg-inline--fa fa-css3-alt fa-w-12 ${classes.svgImg}`}
               role='img'
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 384 512'
@@ -217,7 +217,7 @@ const Skills = () => {
               focusable='false'
               data-prefix='fab'
               data-icon='docker'
-              class={`svg-inline--fa fa-docker fa-w-20 ${classes.svgImg}`}
+              className={`svg-inline--fa fa-docker fa-w-20 ${classes.svgImg}`}
               role='img'
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 640 512'
