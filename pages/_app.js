@@ -29,6 +29,10 @@ export default function MyApp(props) {
         <CssBaseline />
         <Header />
         <Component {...pageProps} />
+        <h2 style={{ textAlign: 'center', color: 'grey' }}>
+          <i className='fa fa-wrench' style={{ color: 'grey', marginRight: '10px' }}></i>
+          Under konstruktion
+        </h2>
         <Footer />
       </ThemeProvider>
     </>

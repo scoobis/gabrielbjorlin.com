@@ -1,7 +1,9 @@
-import React from 'react'
-import { Container, Grid, Typography, Cell } from '@material-ui/core'
+import React, { useState } from 'react'
+import { Container, Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Typical from 'react-typical'
+
+import { GITHUB_URL, LINKEDIN_URL, INSTAGRAM_URL, EMAIL } from '../utils/config'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -53,8 +55,8 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '25px'
     }
   },
-  temp: {
-    marginTop: '-50px',
+  bottomContainer: {
+    marginTop: '-80px',
     marginBottom: '40px',
     textAlign: 'center',
     color: 'grey',
@@ -66,53 +68,57 @@ const useStyles = makeStyles((theme) => ({
 
 const Index = () => {
   const classes = useStyles()
+
+  const [description] = useState('Full-stack developer, that likes to work with the entire tech stack, including infrastructure and administration!')
+
   return (
     <Container>
       <Grid container justify='center' spacing={8} alignItems='center' className={classes.container}>
         <Grid item sm={12} md={6} className={classes.gridBox}>
           <Typography variant='h3'>Hi!</Typography>
-          <Typography variant='h1' className={classes.bold}>
+          <Typography variant='h1' className={classes.bold} style={{ fontSize: '3.4rem' }}>
             I'm Gabriel.
           </Typography>
           <h3 className={classes.typingText}>
             <i className='fa fa-code' style={{ marginRight: '10px', fontWeight: 'bold' }}></i>
             <Typical steps={['Devops Engineer', 1500, 'Full-Stack Developer', 1500, 'Triathlete', 1500]} loop={Infinity} wrapper='b' />
           </h3>
-          <p className={classes.borderBottom}>
-            Full-stack developer, that likes to work with the entire tech stack, including infrastructure and administration!
-          </p>
+          <p className={classes.borderBottom}>{description}</p>
         </Grid>
         <Grid item sm={12} md={6} className={classes.linkGridBox}>
           <Typography variant='h4' className={classes.linkMargin}>
-            <a className={classes.shadowText} href='https://github.com/scoobis' target='_blank'>
+            <a className={classes.shadowText} href={GITHUB_URL} target='_blank'>
               <i className={`fa fa-github ${classes.imgIcon}`}></i>
               GITHUB
             </a>
           </Typography>
           <Typography variant='h4' className={classes.linkMargin}>
-            <a className={classes.shadowText} href='https://www.linkedin.com/in/gabriel-bj%C3%B6rlin-1625281b6/' target='_blank'>
+            <a className={classes.shadowText} href={LINKEDIN_URL} target='_blank'>
               <i className={`fa fa-linkedin ${classes.imgIcon}`}></i>
               LINKEDIN
             </a>
           </Typography>
           <Typography variant='h4' className={classes.linkMargin}>
-            <a className={classes.shadowText} href='https://www.instagram.com/gabrielbjorlin/' target='_blank'>
+            <a className={classes.shadowText} href={INSTAGRAM_URL} target='_blank'>
               <i className={`fa fa-instagram ${classes.imgIcon}`}></i>
               INSTAGRAM
             </a>
           </Typography>
           <Typography variant='h4' className={classes.linkMargin}>
-            <a className={classes.shadowText} href='mailto:gabriel.bjorlin@gmail.com'>
+            <a className={classes.shadowText} href={`mailto:${EMAIL}`}>
               <i className={`fa fa-envelope-square ${classes.imgIcon}`}></i>
               EMAIL
             </a>
           </Typography>
         </Grid>
       </Grid>
-      <h2 className={classes.temp}>
-        <i className='fa fa-wrench' style={{ color: 'grey', marginRight: '10px' }}></i>
-        Under konstruktion
-      </h2>
+      <div className={classes.bottomContainer}>
+        <Typography variant='subtitle1' style={{ textAlign: 'center' }}>
+          <a href='https://github.com/scoobis/gabrielbjorlin.com' target='_blank' style={{ color: 'grey', textDecoration: 'none' }}>
+            View Source Code
+          </a>
+        </Typography>
+      </div>
     </Container>
   )
 }

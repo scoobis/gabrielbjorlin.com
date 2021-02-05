@@ -2,7 +2,8 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
-import Link from 'next/link'
+
+import { GITHUB_URL, LINKEDIN_URL, INSTAGRAM_URL, EMAIL } from '../../utils/config'
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -42,7 +43,7 @@ const Footer = () => {
         </Grid>
         <Grid item xl={2} lg={4} sm={6} xs={12}>
           <Typography variant='subtitle1' className={classes.footerText}>
-            <a href='https://github.com/scoobis' target='_blank' className={classes.linktext}>
+            <a href={GITHUB_URL} target='_blank' className={classes.linktext}>
               <i className={`fa fa-github ${classes.icon}`} aria-hidden='true'></i>
               Github
             </a>
@@ -50,7 +51,7 @@ const Footer = () => {
         </Grid>
         <Grid item xl={2} lg={4} sm={6} xs={12}>
           <Typography variant='subtitle1' className={classes.footerText}>
-            <a href='https://www.linkedin.com/in/gabriel-bj%C3%B6rlin-1625281b6/' target='_blank' className={classes.linktext}>
+            <a href={LINKEDIN_URL} target='_blank' className={classes.linktext}>
               <i className={`fa fa-linkedin ${classes.icon}`} aria-hidden='true'></i>
               LinkedIn
             </a>
@@ -58,7 +59,7 @@ const Footer = () => {
         </Grid>
         <Grid item xl={2} lg={4} sm={6} xs={12}>
           <Typography variant='subtitle1' className={classes.footerText}>
-            <a href='https://www.instagram.com/gabrielbjorlin/' target='_blank' className={classes.linktext}>
+            <a href={INSTAGRAM_URL} target='_blank' className={classes.linktext}>
               <i className={`fa fa-instagram ${classes.icon}`} aria-hidden='true'></i>
               Instagram
             </a>
@@ -66,9 +67,9 @@ const Footer = () => {
         </Grid>
         <Grid item xl={2} lg={4} sm={6} xs={12}>
           <Typography variant='subtitle1' className={classes.footerText}>
-            <a href='mailTo:gabriel.bjorlin@gmail.com' target='_blank' className={classes.linktext}>
+            <a href={`mailTo:${EMAIL}`} target='_blank' className={classes.linktext}>
               <i className={`fa fa-envelope-square ${classes.icon}`} aria-hidden='true'></i>
-              Gabriel.Bjorlin@gmail.com
+              {EMAIL}
             </a>
           </Typography>
         </Grid>
