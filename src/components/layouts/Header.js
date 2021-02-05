@@ -5,6 +5,7 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
 import InfoIcon from '@material-ui/icons/Info'
 import HomeIcon from '@material-ui/icons/Home'
 import ComputerIcon from '@material-ui/icons/Computer'
+import DirectionsRunIcon from '@material-ui/icons/DirectionsRun'
 
 import { useRouter } from 'next/router'
 
@@ -36,6 +37,7 @@ export default function LabelBottomNavigation() {
     <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
       <BottomNavigationAction label='Home' value='home' icon={<HomeIcon />} />
       <BottomNavigationAction label='Software' value='software' icon={<ComputerIcon />} />
+      <BottomNavigationAction label='Triathlon' value='triathlon' icon={<DirectionsRunIcon />} />
       <BottomNavigationAction label='About' value='about' icon={<InfoIcon />} />
     </BottomNavigation>
   )
