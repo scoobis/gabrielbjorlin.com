@@ -25,6 +25,7 @@ const Software = () => {
       <hr style={{ marginTop: '40px', marginBottom: '40px' }} />
 
       <Skills />
+      <br />
     </Container>
   )
 }
