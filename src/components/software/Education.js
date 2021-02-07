@@ -31,6 +31,17 @@ const Education = () => {
     'Server-based Web Programming | 7,5 hp',
     'statistics | 7,5 hp'
   ]
+
+  const year3 = [
+    'Deployment Infrastructures | 7,5 hp',
+    'Internet Security | 7,5 hp',
+    'Continuous Delivery | 7,5 hp',
+    'Agile Development and Engineering Practices | 7.5 hp',
+    'Degree Project at Bachelor Level | 15 hp (ongoing)',
+    'Astronomy | 7,5 hp (ongoing)',
+    'Entreprenourship | 7.5 hp (soon to begin)'
+  ]
+
   const classes = useStyles()
   return (
     <>
@@ -73,6 +84,19 @@ const Education = () => {
       </Typography>
       <ul style={{ lineHeight: '40px' }}>
         {year2.map((year, i) => {
+          return (
+            <li key={i}>
+              <Typography variant='body1'>{year}</Typography>
+            </li>
+          )
+        })}
+      </ul>
+
+      <Typography variant='subtitle1' style={{ fontWeight: 'bold' }}>
+        Year 3
+      </Typography>
+      <ul style={{ lineHeight: '40px' }}>
+        {year3.map((year, i) => {
           return (
             <li key={i}>
               <Typography variant='body1'>{year}</Typography>
