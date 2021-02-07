@@ -11,14 +11,25 @@ const useStyles = makeStyles((theme) => ({
 
 const Education = () => {
   const year1 = [
-    'Introduction to Programming | 7.5 HP',
-    'Web Technology 1 | 7.5 HP',
-    'Client-based Web Programming | 7.5 HP',
-    'Problem Solving and Programming | 7.5 HP',
-    'Programming and Data Structures | 7.5 HP',
-    'Software Technology | 7.5 HP',
-    'System Administration 1 | 7.5 HP',
-    'Individual Software Development Project | 7.5 HP'
+    'Introduction to Programming | 7,5 hp',
+    'Web Technology 1 | 7,5 hp',
+    'Client-based Web Programming | 7,5 hp',
+    'Problem Solving and Programming | 7,5 hp',
+    'Programming and Data Structures | 7,5 hp',
+    'Software Technology | 7,5 hp',
+    'System Administration 1 | 7,5 hp',
+    'Individual Software Development Project | 7,5 hp'
+  ]
+
+  const year2 = [
+    'System Administration 2 | 7,5 hp',
+    'Object Oriented Analysis and Design using UML | 7,5 hp',
+    'Software Testing | 7,5 hp',
+    'Database Theory | 7,5 hp',
+    'Software design | 7,5 hp',
+    'Project in Software technology | 7,5 hp',
+    'Server-based Web Programming | 7,5 hp',
+    'statistics | 7,5 hp'
   ]
   const classes = useStyles()
   return (
@@ -47,6 +58,21 @@ const Education = () => {
       </Typography>
       <ul style={{ lineHeight: '40px' }}>
         {year1.map((year, i) => {
+          return (
+            <li key={i}>
+              <Typography variant='body1'>{year}</Typography>
+            </li>
+          )
+        })}
+      </ul>
+
+      <br />
+
+      <Typography variant='subtitle1' style={{ fontWeight: 'bold' }}>
+        Year 2
+      </Typography>
+      <ul style={{ lineHeight: '40px' }}>
+        {year2.map((year, i) => {
           return (
             <li key={i}>
               <Typography variant='body1'>{year}</Typography>
