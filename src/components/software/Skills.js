@@ -21,7 +21,9 @@ const Skills = () => {
   return (
     <>
       {' '}
-      <Typography variant='h3'>Skills</Typography>
+      <Typography variant='h2' style={{ fontWeight: 'bold' }}>
+        Skills
+      </Typography>
       <List>
         <ListItem button component='a' target='_blank' href='https://www.java.com/' className={classes.listItem}>
           <ListItemIcon>

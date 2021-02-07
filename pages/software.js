@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Container, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
 import Skills from '../src/components/software/Skills'
+import Education from '../src/components/software/Education'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -13,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
   },
   svgImg: {
     width: '32px'
+  },
+  hrLine: {
+    marginTop: '40px',
+    marginBottom: '40px'
   }
 }))
 
@@ -21,10 +26,13 @@ const Software = () => {
   return (
     <Container className={classes.container}>
       <Typography variant='h1'>Software</Typography>
-
-      <hr style={{ marginTop: '40px', marginBottom: '40px' }} />
+      <hr className={classes.hrLine} />
 
       <Skills />
+      <hr className={classes.hrLine} />
+
+      <Education />
+
       <br />
     </Container>
   )
