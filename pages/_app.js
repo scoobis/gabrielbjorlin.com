@@ -8,6 +8,7 @@ import Footer from '../src/components/layouts/Footer'
 
 export default function MyApp(props) {
   const { Component, pageProps } = props
+  const { pathname } = props.router
 
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -20,9 +21,10 @@ export default function MyApp(props) {
   return (
     <>
       <Head>
-        <title>Gabriel Bjorlin</title>
+        <title>Gabriel Björlin {pathname.length > 1 ? `| ${pathname.substring(1, pathname.length)}` : ''}</title>
         <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width' />
         <link rel='icon' href='/favicon.ico' />
+        <meta name='description' content='Gabriel Björlin - Software Developer | Devops Engineer | Triathelete' />
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' />
       </Head>
       <ThemeProvider theme={theme}>
